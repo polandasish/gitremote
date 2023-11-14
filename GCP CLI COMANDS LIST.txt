@@ -36,3 +36,5 @@ gcloud compute firewall-rules create demo-vpc-allow-rdp --project=gcp-learning02
 gcloud compute firewall-rules create demo-vpc-allow-ssh --project=gcp-learning02 --network=projects/gcp-learning02/global/networks/demo-vpc --description=Allows\ TCP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 22. --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:22
 
 gcloud compute instances list
+
+gcloud storage buckets list

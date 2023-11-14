@@ -21,67 +21,6 @@ gcloud compute instances create instance-lb --project=gcp-learning02 --zone=us-c
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 gcloud compute networks create demo-vpc --project=gcp-learning02 --description=demo-vpc --subnet-mode=custom --mtu=1500 --bgp-routing-mode=regional
 
 gcloud compute networks subnets create demo-subnet --project=gcp-learning02 --range=192.168.7.0/24 --stack-type=IPV4_ONLY --network=demo-vpc --region=us-central1
@@ -95,3 +34,5 @@ gcloud compute firewall-rules create demo-vpc-allow-icmp --project=gcp-learning0
 gcloud compute firewall-rules create demo-vpc-allow-rdp --project=gcp-learning02 --network=projects/gcp-learning02/global/networks/demo-vpc --description=Allows\ RDP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 3389. --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:3389
 
 gcloud compute firewall-rules create demo-vpc-allow-ssh --project=gcp-learning02 --network=projects/gcp-learning02/global/networks/demo-vpc --description=Allows\ TCP\ connections\ from\ any\ source\ to\ any\ instance\ on\ the\ network\ using\ port\ 22. --direction=INGRESS --priority=65534 --source-ranges=0.0.0.0/0 --action=ALLOW --rules=tcp:22
+
+gcloud compute instances list

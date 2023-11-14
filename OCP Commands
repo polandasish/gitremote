@@ -1,3 +1,5 @@
 oc get route -n openshift-console
 oc whoami --show-console
 oc adm new-project demo
+
+oc get svc 

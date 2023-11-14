@@ -1,0 +1,2 @@
+oc get route -n openshift-console
+oc whoami --show-console
